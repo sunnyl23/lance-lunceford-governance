@@ -39,6 +39,24 @@
     --gold: 43 72% 52%;
     --gold-light: 43 60% 70%;
     --gold-dark: 43 72% 38%;
+
+    /* Page-specific palettes */
+    --stone: 35 15% 75%;
+    --marble: 35 10% 92%;
+    --roman-amber: 35 70% 45%;
+    --roman-shadow: 220 25% 8%;
+
+    --cyber-bg: 220 60% 4%;
+    --cyber-glow: 190 100% 50%;
+    --cyber-glow-dim: 190 80% 30%;
+    --cyber-surface: 220 50% 8%;
+    --cyber-border: 190 60% 20%;
+    --cyber-text: 190 20% 80%;
+
+    --velvet: 345 40% 18%;
+    --concert-warm: 35 60% 55%;
+    --concert-cream: 40 30% 93%;
+    --concert-shadow: 20 30% 8%;
     --navy: 220 45% 15%;
     --navy-light: 220 35% 25%;
     --cream: 40 33% 97%;
@@ -92,6 +110,47 @@
 
   .nav-link {
     @apply text-sm tracking-widest uppercase font-sans font-medium transition-colors duration-300;
+  }
+
+  /* Stoic / Roman */
+  .stoic-section {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--roman-shadow)) 0%,
+      hsl(220 25% 12%) 100%
+    );
+  }
+
+  .marble-texture {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--marble)) 0%,
+      hsl(35 8% 88%) 50%,
+      hsl(var(--marble)) 100%
+    );
+  }
+
+  /* Cyber / Tech */
+  .cyber-section {
+    background: hsl(var(--cyber-bg));
+  }
+
+  .cyber-glow-border {
+    border-color: hsl(var(--cyber-glow) / 0.3);
+  }
+
+  .cyber-card {
+    background: hsl(var(--cyber-surface));
+    border: 1px solid hsl(var(--cyber-glow) / 0.15);
+  }
+
+  /* Concert Hall */
+  .concert-section {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--concert-shadow)) 0%,
+      hsl(20 25% 12%) 100%
+    );
   }
 }
 
